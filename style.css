@@ -1,8 +1,47 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans');
+* {
+    box-sizing: border-box;
+}
+:root {
+    --bgcolor: #121212;
+    --onprimary: #40E0D0;
+    --primary: #228B22;
+    --secondary: #000080;
+}
 body {
-    background-color: #121212;
+    background-color: var(--bgcolor);
+    color: var(--onprimary);
     font-family: "Open Sans";
     font-size: 1.25em;
-    color: #eeeeee;
     margin: 1em;
+}
+
+.card {
+    border-radius: 15px;
+    background-color: var(--primary);
+    margin-bottom: 1em;
+    margin-top: 2em;
+    padding: 1.25em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 5px 5px 2px var(--secondary);
+}
+
+.column {
+}
+
+@media screen and (min-width: 768px) {
+    .card {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 0.5em;
+        margin-right: 0.5em;
+    }
+
+    .column {
+    }
+
 }
